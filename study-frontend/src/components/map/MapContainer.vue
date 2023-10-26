@@ -1,46 +1,47 @@
 <template>
- <div id="container">
-
- </div>
+  <div id="map" ref="rootmap"></div>
 </template>
 
-<script setup>
-import { onMounted, onUnmounted } from "vue";
-import AMapLoader from "@amap/amap-jsapi-loader";
-
-let map = null;
-
-onMounted(() => {
-  AMapLoader.load({
-    key: "2d318b978869d40d92956089f8612cfb", // 申请好的Web端开发者Key，首次调用 load 时必填
-    version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-    plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
-  })
-      .then((AMap) => {
-        map = new AMap.Map("container", {
-          // 设置地图容器id
-          viewMode: "3D", // 是否为3D地图模式
-          zoom: 11, // 初始化地图级别
-          center: [116.397428, 39.90923], // 初始化地图中心点位置
-        });
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-});
-
-onUnmounted(() => {
-  map?.destroy();
-});
+<script>
+import "ol/ol.css";
+import { Map, View } from "ol";
+import TileLayer from "ol/layer/Tile";
+import OSM from "ol/source/OSM";
+export default {
+  name: "ol",
+  data() {
+    return {
+      message: "ol-test",
+      map: null,
+    };
+  },
+  mounted() {
+    var mapcontainer = this.$refs.rootmap;
+    this.map = new Map({
+      target: "map",
+      layers: [
+        new TileLayer({
+          source: new OSM(),
+        }),
+      ],
+      view: new View({
+        projection: "EPSG:4326", //使用这个坐标系
+        center: [114.064839, 22.548857], //深圳
+        zoom: 12,
+      }),
+    });
+  },
+  methods: {},
+};
 </script>
 
-
-
 <style scoped>
-#container{
-  padding:0px;
-  margin: 0px;
-  width: 100%;
-  height: 800px;
+#map {
+  height: 100%;
+}
+/*隐藏ol的一些自带元素*/
+.ol-attribution,
+.ol-zoom {
+  display: none;
 }
 </style>

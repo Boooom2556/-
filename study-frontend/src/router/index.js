@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import {useStore} from "../stores";
+import view2 from "../views/main/view2.vue";
+import view1 from "../views/main/view1.vue";
+import view4 from "../views/main/view4.vue"
+import view3 from "../views/main/view3.vue";
+import index1 from "../views/main/index1.vue";
 
 
 const router = createRouter({
@@ -30,8 +35,39 @@ const router = createRouter({
     },{
     path:'/index',
       name:'index',
-      component:()=>import('../views/IndexView.vue')
-    }
+      component:()=>import('../views/IndexView.vue'),
+      children:[
+        {
+          path:'/view1',
+          name:'view1',
+          component: view1
+
+        },
+        {
+          path:'/view2',
+          name:'view2',
+          component: view2,
+
+        },
+        {
+          path:'/view3',
+          name:'view3',
+          component: view3,
+        },
+        {
+          path:'/view4',
+          name:'view4',
+          component: view4,
+        },
+        {
+          path:'/index1',
+          name:'index1',
+          component: index1,
+        },
+      ]
+    },
+
+
   ]
 })
 
