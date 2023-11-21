@@ -1,7 +1,8 @@
 <template>
   <!-- 地图容器 -->
-  <div id="map" class="map__x" ref="mapCom"></div>
-
+  <div id="map" class="map__x" ref="mapCom">
+    <el-button  type="danger">11</el-button>
+  </div>
   <!-- 弹窗容器 -->
   <div ref="popupCom" class="popup">
     <!-- 关闭按钮 -->

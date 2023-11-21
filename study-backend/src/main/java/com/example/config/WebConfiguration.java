@@ -17,6 +17,6 @@ public class WebConfiguration implements WebMvcConfigurer {
         registry
                 .addInterceptor(interceptor)
                 .addPathPatterns("/**") //拦截所有地址
-                .excludePathPatterns("/api/auth/**");  //排除发送邮件
+                .excludePathPatterns("/api/auth/**","/data/**"); //排除发送邮件
     }
 }

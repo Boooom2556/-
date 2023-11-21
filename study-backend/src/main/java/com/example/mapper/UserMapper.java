@@ -1,6 +1,8 @@
 package com.example.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.entity.auth.Account;
+import com.example.entity.auth.data;
 import com.example.entity.user.AccountUser;
 import org.apache.ibatis.annotations.*;
 

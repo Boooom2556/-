@@ -117,6 +117,9 @@ public class SecurityConfiguration {
             response.getWriter().write(JSONObject.toJSONString(RestBean.success("登录成功"))); //返回内容
         else if (request.getRequestURI().endsWith("/logout"))
             response.getWriter().write(JSONObject.toJSONString(RestBean.success("退出成功")));
+        if (request.getRequestURI().endsWith("/data/list"))
+            response.getWriter().write(JSONObject.toJSONString(RestBean.success(dataSource)));
+
     }
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         response.setCharacterEncoding("utf-8"); //返回格式

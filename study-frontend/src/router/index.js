@@ -5,6 +5,8 @@ import view1 from "../views/main/view1.vue";
 import view4 from "../views/main/view4.vue"
 import view3 from "../views/main/view3.vue";
 import index1 from "../views/main/index1.vue";
+import view11 from "../views/main/view11.vue";
+import index3 from "../views/main/index3.vue";
 
 
 const router = createRouter({
@@ -40,8 +42,7 @@ const router = createRouter({
         {
           path:'/view1',
           name:'view1',
-          component: view1
-
+          component: view1,
         },
         {
           path:'/view2',
@@ -64,6 +65,18 @@ const router = createRouter({
           name:'index1',
           component: index1,
         },
+        {
+          path: '/view11',
+          name:'view11',
+          component: view11,
+
+        },
+        {
+          path: '/index3',
+          name:'index3',
+          component: index3,
+        }
+
       ]
     },
 

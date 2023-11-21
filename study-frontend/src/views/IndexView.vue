@@ -9,34 +9,34 @@
       </div>
     </el-header>
     <el-container>
-      <el-aside width="200px">
-
-          <el-menu :default-openeds="['1', '3']">
+      <el-aside width="isCollapse ? '50px':'200px'">
+        <div class="toggle-button" @click="toggleCollapse">|||</div>
+          <el-menu :default-openeds="['1', '3']" unique-opened :collapse="isCollapse">
 
             <el-sub-menu index="1" >
 
               <template #title>
-                <el-icon><message /></el-icon>Openlayers
+                <el-icon><message /></el-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Openlayers
               </template>
               <el-menu-item-group>
                 <el-menu-item index="1-1" @click="router.push('view1')">高德</el-menu-item>
                 <el-menu-item index="1-2" @click="router.push('view2')">天地图</el-menu-item>
-                <el-menu-item index="1-3" @click="router.push('view4')">Antv l7</el-menu-item>
+                <el-menu-item index="1-3" @click="router.push('view11')">JS API</el-menu-item>
               </el-menu-item-group>
             </el-sub-menu>
             <el-sub-menu index="2">
               <template #title>
-                <el-icon><icon-menu/></el-icon>Navigator Two
+                <el-icon><icon-menu/></el-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;展示
               </template>
               <el-menu-item-group>
-                <el-menu-item index="2-1" @click="router.push('view3')">Option 1</el-menu-item>
+                <el-menu-item index="2-1" @click="router.push('view3')">地图</el-menu-item>
                 <el-menu-item index="2-2">Option 2</el-menu-item>
               </el-menu-item-group>
                 <el-menu-item index="2-3">Option 3</el-menu-item>
             </el-sub-menu>
             <el-sub-menu index="3">
               <template #title>
-                <el-icon><setting /></el-icon>Navigator Three
+                <el-icon><setting /></el-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Navigator Three
               </template>
               <el-menu-item-group>
                 <el-menu-item index="3-2">Option 2</el-menu-item>
@@ -49,13 +49,13 @@
             </el-sub-menu>
             <el-sub-menu index="4">
               <template #title>
-                <el-icon><setting /></el-icon>个人页面
+                <el-icon><setting /></el-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人页面
               </template>
               <el-menu-item-group>
                 <el-menu-item index="4-2" @click="router.push('index1')">首页</el-menu-item>
               </el-menu-item-group>
               <el-menu-item index="4-3">个人中心</el-menu-item>
-              <el-menu-item index="4-4-1">数据管理</el-menu-item>
+              <el-menu-item index="4-4-1" @click="router.push('index3')">数据管理</el-menu-item>
 
             </el-sub-menu>
           </el-menu>
@@ -71,11 +71,11 @@
 </template>
 
 <script setup>
-
 import {get} from "../net";
 import {ElMessage} from "element-plus";
 import router from "../router";
 import {useStore} from "../stores";
+import {ref} from "vue";
 
 const store = useStore()
 
@@ -87,12 +87,35 @@ const logout = ()=>{
     router.push('/')
   })
 }
+  const isCollapse =ref(false)
+
+
+const toggleCollapse=()=>{
+  console.log(111)
+  isCollapse.value = !isCollapse.value
+}
 </script>
 
 <style scoped>
 .container{
 
 }
+.toggle-button{
+
+ background-color: #4A5064;
+
+ font-size:10px;
+
+ line-height:24px;
+
+ color:#fff;
+
+ text-align: center;
+
+ letter-spacing: 0.2em;
+
+ cursor:pointer;
+ }
 .s1{
   color: #eaedf1;
   font-size: 30px;
@@ -107,6 +130,8 @@ const logout = ()=>{
   /*background-color: #333744;*/
   height: 670px;
   border-block: black;
+  text-align: center;
+  font-weight: bold;
 }
 
 .el-main{
