@@ -16,7 +16,7 @@
             <el-sub-menu index="1" >
 
               <template #title>
-                <el-icon><message /></el-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Openlayers
+                <el-icon><message /></el-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地图
               </template>
               <el-menu-item-group>
                 <el-menu-item index="1-1" @click="router.push('view1')">高德</el-menu-item>
@@ -26,20 +26,20 @@
             </el-sub-menu>
             <el-sub-menu index="2">
               <template #title>
-                <el-icon><icon-menu/></el-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;展示
+                <el-icon><Menu /></el-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;哈哈
               </template>
               <el-menu-item-group>
                 <el-menu-item index="2-1" @click="router.push('view3')">地图</el-menu-item>
-                <el-menu-item index="2-2">Option 2</el-menu-item>
+                <el-menu-item index="2-2" @click="router.push('view21')">Option 2</el-menu-item>
               </el-menu-item-group>
-                <el-menu-item index="2-3">Option 3</el-menu-item>
+                <el-menu-item index="2-3" @click="router.push('view22')">Option 3</el-menu-item>
             </el-sub-menu>
             <el-sub-menu index="3">
               <template #title>
-                <el-icon><setting /></el-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Navigator Three
+                <el-icon><InfoFilled /></el-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;展示
               </template>
               <el-menu-item-group>
-                <el-menu-item index="3-2">Option 2</el-menu-item>
+                <el-menu-item index="3-2" >Option 2</el-menu-item>
               </el-menu-item-group>
                 <el-menu-item index="3-3">Option 3</el-menu-item>
               <el-sub-menu index="3-4">
@@ -47,6 +47,7 @@
                 <el-menu-item index="3-4-1">Option 4-1</el-menu-item>
               </el-sub-menu>
             </el-sub-menu>
+
             <el-sub-menu index="4">
               <template #title>
                 <el-icon><setting /></el-icon>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人页面

@@ -1,0 +1,215 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛市团岛污水处理厂"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.42911, 36.258455]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "海泊河污水处理厂"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.193192, 22.452734]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛李村河水务有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.167686, 35.971012]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "中国石化青岛石油化工有限责任公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.365991, 36.207163]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛啤酒股份有限公司青岛啤酒二厂"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.408696, 36.138637]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛啤酒股份有限公司青岛啤酒四厂"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.392414, 36.170239]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛水务集团有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.382665, 36.066938]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛市第八人民医院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.419586, 36.159724]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛娄山河水务有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.391457, 36.214339]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "中粮可口可乐饮料（山东）有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [87.496681, 43.851707]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "山东中烟工业有限责任公司青岛卷烟厂"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.477294, 36.150524]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛丰润海藻有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.626565, 36.299764]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛啤酒股份有限公司青岛啤酒五厂"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.536871, 36.110922]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛崂特啤酒有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.593962, 36.12473]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛张村河水务有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.167686, 35.971012]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛大学附属医院（崂山院区）"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [122.119622, 37.509295]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "澳柯玛股份有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.35157, 36.09243]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "银河水务（胶南）有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [106.187229, 37.993897]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛经济技术开发区海尔能源动力有限公司"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [114.176358, 36.597227]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛大学附属医院黄岛院区"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.155926, 35.987175]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "青岛西海岸新区中心医院"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [120.190155, 35.963562]
+      }
+    }
+  ]
+}

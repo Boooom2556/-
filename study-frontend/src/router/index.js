@@ -7,7 +7,8 @@ import view3 from "../views/main/view3.vue";
 import index1 from "../views/main/index1.vue";
 import view11 from "../views/main/view11.vue";
 import index3 from "../views/main/index3.vue";
-
+import view21 from "../views/main/view21.vue";
+import view22 from "../views/main/view22.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -75,6 +76,16 @@ const router = createRouter({
           path: '/index3',
           name:'index3',
           component: index3,
+        },
+        {
+          path:'/view21',
+          name:'view21',
+          component:view21,
+        },
+        {
+          path:'/view22',
+          name:'view22',
+          component:view22,
         }
 
       ]
@@ -84,18 +95,18 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to,from,next)=>{
-  const store = useStore()
-    if (store.auth.user !=null && to.name.startsWith('welcome-')){
-      next('/index')
-  }else if (store.auth.user == null && to.fullPath.startsWith('/index')){
-      next('/')
-    }else if (to.matched.length === 0){
-      next('/index')
-    }else {
-      next()
-    }
-})
+// router.beforeEach((to,from,next)=>{
+//   const store = useStore()
+//     if (store.auth.user !=null && to.name.startsWith('welcome-')){
+//       next('/index/index1')
+//   }else if (store.auth.user == null && to.fullPath.startsWith('/index/index1')){
+//       next('/')
+//     }else if (to.matched.length === 0){
+//       next('/index/index1')
+//     }else {
+//       next()
+//     }
+//})
 
 
 

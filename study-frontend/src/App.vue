@@ -6,13 +6,13 @@ import router from "./router";
 
 const store = useStore()
 
-console.log(store.auth.user)
-  get('/api/user/me',(message) =>{
-  store.auth.user = message
-  router.push('/index')
-},() =>{
-  store.auth.user = null
-})
+// console.log(store.auth.user)
+//   get('/api/user/me',(message) =>{
+//   store.auth.user = message
+//   router.push('/index/index1')
+// },() =>{
+//   store.auth.user = null
+// })
 </script>
 
 <template>

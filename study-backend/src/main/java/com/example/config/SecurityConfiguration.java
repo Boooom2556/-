@@ -44,6 +44,8 @@ public class SecurityConfiguration {
         return http
                 .authorizeHttpRequests()//权限校验
                 .requestMatchers("/api/auth/**").permitAll()//全部放行
+                .requestMatchers("/data/").permitAll()
+
                 .anyRequest().authenticated()//验证全部的请求
                 .and()
                 .formLogin()//表单登录（前端）
@@ -73,6 +75,8 @@ public class SecurityConfiguration {
                 .build();//配置结束
     }
     //JDBC存储rememberme的token
+
+
     @Bean
     public PersistentTokenRepository tokenRepository(){
         JdbcTokenRepositoryImpl jdbcTokenRepository= new JdbcTokenRepositoryImpl();
@@ -91,7 +95,7 @@ public class SecurityConfiguration {
         cors.addAllowedMethod("*");
         cors.addExposedHeader("*");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**",cors);
+        source.registerCorsConfiguration("/**",cors);//所有的都走这里
         return source;
     }
 

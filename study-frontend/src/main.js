@@ -20,3 +20,5 @@ app.mount('#app')
 for (const [name, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(name, component);
 }
+// 意思是携带cookie信息,保持session的一致性
+axios.defaults.withCredentials = true
